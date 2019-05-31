@@ -20,7 +20,7 @@ mongoose.connect(db,{ useNewUrlParser: true })
 //Use Routes
 app.use('/api/items',items);
 
-//Serve static assets
+//Serve static assets if in production
 if(process.env.NODE_ENV==='production'){
     //Set a static folder
     app.use(express.static('client/build'));
