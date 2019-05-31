@@ -3,8 +3,11 @@ const mongoose=require('mongoose');
 const bodyParser=require('body-parser');
 const path=require('path');
 const items=require('./routes/api/items');
+const cors=require('cors');
 
 const app=express();
+
+app.use(cors());
 
 //BodyParser Middleware
 app.use(bodyParser.json());
