@@ -1,8 +1,11 @@
 const express=require('express');
+const cors=require('cors');
 const router=express.Router();
 
 //Item Model
 const Item=require('../../models/Item');
+
+app.use(cors());
 
 // @route GET api/items
 // @desc  Get All Items
