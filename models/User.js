@@ -19,7 +19,7 @@ const UserSchema=new Schema({
     register_date:{
         type:Date,
         default:Date.now
-    },
+    }
 });
 
 module.exports=Item=mongoose.model('user',UserSchema);

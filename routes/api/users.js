@@ -4,7 +4,7 @@ const config=require('config');
 const jwt=require('jsonwebtoken');
 const router=express.Router();
 
-//Item Model
+//User Model
 const User=require('../../models/User');
 
 // @route GET api/users
@@ -12,7 +12,7 @@ const User=require('../../models/User');
 // @acess Public
 router.post('/',(req,res)=>{
 
-   const {name,email,password}=req.body;
+   const {name,email,password}=req.body;  //Destructuring
 
    if(!name || !email ||!password){
        return res.status(400).json({msg:'Please enter all fields'});

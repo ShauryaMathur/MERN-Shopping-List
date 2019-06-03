@@ -7,9 +7,14 @@ import store from './store';
 import  ShoppingList from './components/ShoppingList'
 import ItemModal from './components/ItemModal';
 import {Container} from 'reactstrap';
+import {loadUser} from './actions/authactions';
 
 
 class App extends Component {
+
+  componentDidMount(){
+    store.dispatch(loadUser());
+  }
   render(){
     return (
       <Provider store={store}>

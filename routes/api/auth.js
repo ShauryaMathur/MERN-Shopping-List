@@ -13,7 +13,7 @@ const User=require('../../models/User');
 // @acess Public
 router.post('/',(req,res)=>{
 
-   const {email,password}=req.body;
+   const {email,password}=req.body;  //Destructuring
 
    if(!email ||!password){
        return res.status(400).json({msg:'Please enter all fields'});
@@ -27,7 +27,7 @@ router.post('/',(req,res)=>{
             }
            
             //Validate Password
-            bcrypt.compare(password,user.password)
+            bcrypt.compare(password,user.password)  //Compares String to hashed Pwd form DB
                     .then(isMatch=>{
                         if(!isMatch) return res.status(400).json({msg:'Invalid Credentials'});
 
