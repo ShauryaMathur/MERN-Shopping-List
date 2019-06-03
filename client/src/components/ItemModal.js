@@ -41,7 +41,7 @@ class ItemModal extends Component{
         return(
             <div>
 
-                {this.props.isAuthenticated?<Button color="dark" style={{marginBottom:'2rem'}} onClick={this.toggle}>Add Item</Button>:<h4 className="Please LogIn to manage items"></h4>}
+                {this.props.isAuthenticated?<Button color="dark" style={{marginBottom:'2rem'}} onClick={this.toggle}>Add Item</Button>:<h4 className="mb-3 ml-4">Please Login to manage items</h4>}
                 
                 <Modal isOpen={this.state.modal} toggle={this.toggle}>
                     <ModalHeader toggle={this.toggle}>Add to Shopping List</ModalHeader>
